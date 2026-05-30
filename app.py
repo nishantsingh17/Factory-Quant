@@ -1,14 +1,18 @@
 import streamlit as st
 import pandas as pd
 import sys
+import os
 import traceback
 
-from modules.classifier import classify_component
-from modules.feeder_optimizer import feeder_summary
-from modules.cost_calculator import calculate_cost
-from modules.report_generator import generate_report
-from modules.parser import normalize_bom
-from modules.database_manager import init_db, save_component, load_database, delete_component
+# Add current directory to path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from Modules.classifier import classify_component
+from Modules.feeder_optimizer import feeder_summary
+from Modules.cost_calculator import calculate_cost
+from Modules.report_generator import generate_report
+from Modules.parser import normalize_bom
+from Modules.database_manager import init_db, save_component, load_database, delete_component
 
 # ---------------------------------------------------
 # PAGE CONFIGURATION
